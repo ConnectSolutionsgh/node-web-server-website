@@ -2,7 +2,7 @@ const request= require('request')
 //const getLocation='kofridua'
 const geocode=(address,callback)=>{
     url='https://api.mapbox.com/geocoding/v5/mapbox.places/'+encodeURIComponent(address)+'.json?access_token=pk.eyJ1IjoiYWRhYm8iLCJhIjoiY2tsM3l4b3FkMDlhczMwcDZna3kwMWU1ZiJ9.-irVfabamlpglGUwZo-VTQ&limit=1'
-    request({url:url,json:true},(error,response)=>{
+    request({url,json:true},(error,response)=>{
       if (error){
           callback('Unable to connect to server',undefined);
       }else if(response.body.features.length===0){
