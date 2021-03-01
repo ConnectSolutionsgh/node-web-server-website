@@ -1,6 +1,6 @@
 //const fetch = require("node-fetch")
 
-console.log('Client side javascript is loaded!')
+
 
 
 
