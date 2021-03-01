@@ -4,7 +4,7 @@ const forecast=(latitude,longitude,callback)=>{
     request({url:url,json:true},(error,response)=>{
       if (error){
           callback('Unable to connect to service',undefined)
-      }else if(response.body.error){
+      }else if(body.error){
          callback('unable to find location. Try another search',undefined)
       }else{
             callback(undefined, response.body.current.weather_descriptions[0]+'. it is currently '+response.body.current.temperature +' degrees out. there is a '+ response.body.current.precip +'% chance of rain')
