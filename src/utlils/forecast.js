@@ -7,7 +7,7 @@ const forecast=(latitude,longitude,callback)=>{
       }else if(body.error){
          callback('unable to find location. Try another search',undefined)
       }else{
-            callback(undefined, body.current.weather_descriptions[0]+'. it is currently '+ body.current.temperature +' degrees out. there is a '+ body.current.precip +'% chance of rain. Humidity is ' + body.current.humidity)
+            callback(undefined, body.current.weather_descriptions[0]+'. it is currently '+ body.current.temperature +' degrees out. there is a '+ body.current.precip +'% chance of rain. Humidity is ' + body.current.humidity +'%')
     }
     });
 }
