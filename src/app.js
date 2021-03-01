@@ -1,9 +1,11 @@
 const path=require('path')
 const express=require('express')
-const app=express()
 const hbs=require('hbs')
 const geocode=require('./utlils/geocode')
 const forecast =require ('./utlils/forecast')
+const app=express()
+const port=process.env.PORT||3000
+
 
 
 //serve up static resources
@@ -96,6 +98,6 @@ app.get ('/about',(req,res)=>{
                 errorMessage:'Page NOT found'
             })
         })
-app.listen(3000,()=>{
-    console.log('Server running of port 3000')
+app.listen(port,()=>{
+    console.log('Server running of port '+ port)
 })
